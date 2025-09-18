@@ -1,0 +1,58 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Interest Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f3f6fb; padding:40px; }
+    .card { max-width: 420px; margin:auto; background:#fff; padding:20px;
+            border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.1); }
+    h1 { text-align:center; }
+    label { display:block; margin-top:10px; }
+    input { width:100%; padding:8px; margin-top:5px; border-radius:5px; border:1px solid #ccc; }
+    button { margin-top:15px; width:100%; padding:10px; background:#4b7bec;
+             color:#fff; border:none; border-radius:5px; cursor:pointer; }
+    .result { margin-top:15px; padding:12px; border-radius:8px; background:#f8f9fa; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Simple Interest Calculator</h1>
+    <form method="post">
+      <label for="principal">Principal (P):</label>
+      <input type="number" step="any" name="principal" required>
+
+      <label for="rate">Rate of Interest (R %):</label>
+      <input type="number" step="any" name="rate" required>
+
+      <label for="time">Time (T in years):</label>
+      <input type="number" step="any" name="time" required>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    {% if si is not none %}
+      <div class="result">
+        <p><strong>Simple Interest:</strong> {{ si }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html> -->
+<!doctype html>
+<html>
+  <head><title>Simple Interest Calculator</title></head>
+  <body>
+    <h1>Simple Interest Calculator</h1>
+    <form method="post">
+      <label>Principal (P): <input type="number" step="any" name="principal" required></label><br>
+      <label>Rate (R%): <input type="number" step="any" name="rate" required></label><br>
+      <label>Time (T years): <input type="number" step="any" name="time" required></label><br>
+      <button type="submit">Calculate</button>
+    </form>
+    {% if si %}
+      <h2>Result: {{ si }}</h2>
+    {% endif %}
+  </body>
+</html>
+
